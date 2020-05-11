@@ -1,36 +1,44 @@
 @-moz-document domain("cs.anu.edu.au") {
-#body-wrap, #body, p.block-title, .msg-info, .search-box, .search-box p, .menu-main li, div.menu-flat a.acton-tabs-link-processed,
-#update-wrap,
-#update-details,
-.sml-hdr
-{
-    background: #2d2c2c;
-    color: #c1c1c1
-}
-
-.search-box {
-    border: #2d2c2c;
-}
-
-p img[src$=".png"] {
-    background: #fff;
-}
-
-h2 {
-    color: #b34a50;
-}
-
-a[href] {
-    color: #BF2F37;
-}
-
-div.menu-flat, .menu-main li a, div.menu-flat li, .menu-uni a {
-    border-color: #b34a50;
-    border-left-color: #b34a50;
-    background-color: #b34a50;
-}
-
-#update-details {
-    border-top: #2d2c2c
-}
+    #body-wrap, #body, p.block-title, .msg-info, .msg-success, .msg-warn, .box-college, th, .search-box, .search-box p, .menu-main li, div.menu-flat a.acton-tabs-link-processed,
+    #update-wrap,
+    #update-details,
+    .sml-hdr
+    {
+        background: #2d2c2c; 
+        color: #c1c1c1 !important;
+    }
+    
+    .search-box {
+        border: #2d2c2c;
+    }
+    
+    p img[src$=".png"], .highlighter-rouge{
+        filter: invert(100%);
+    }
+    
+    h1, h2, h3, h2 a.acton-tabs-link-processed {
+        color: #b34a50;
+    }
+    
+    #news {
+        color: #c83c44;
+    }
+    
+    .dateblock-line .day, .dateblock-line .month, .dateblock-line .year {
+        color: #f9474796;
+    }
+    
+    a[href] {
+        color: #BF2F37;
+    }
+    
+    div.menu-flat, .menu-main li a, div.menu-flat li, .menu-uni a {
+        border-color: #b34a50;
+        border-left-color: #b34a50;
+        background-color: #b34a50;
+    }
+    
+    #update-details {
+        border-top: #2d2c2c
+    }
 }
