@@ -6,7 +6,7 @@
 @author      Tom Plant
 ==/UserStyle== */
 @-moz-document url-prefix("https://cs.anu.edu.au") {
-    #body-wrap, #body, /* background */
+    body, #body-wrap, #body, /* background */
     #body p, #body ul.menu li a, .search-box, .search-menu, /* infoboxes, sidebar */
     th, td, /* tables */
     .box-college, /* instruction boxes */
