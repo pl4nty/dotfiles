@@ -2,7 +2,7 @@
 @name        ANU CS Dark
 @namespace   https://github.com/pl4nty/dotfiles/
 @version     1.2.0
-@updateURL   http://localhost:8000/dotfiles/userstyles/anucs-dark.user.css
+@updateURL   https://raw.githubusercontent.com/pl4nty/dotfiles/master/userstyles/anucs-dark.user.css
 @author      Tom Plant
 ==/UserStyle== */
 @-moz-document url-prefix("https://cs.anu.edu.au") {
