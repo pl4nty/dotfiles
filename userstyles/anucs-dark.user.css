@@ -1,5 +1,22 @@
-@-moz-document domain("cs.anu.edu.au") {
-    #body-wrap, #body, p.block-title, .msg-info, .msg-success, .msg-warn, .box-college, th, .search-box, .search-box p, .menu-main li, div.menu-flat a.acton-tabs-link-processed,
+/* ==UserStyle==
+@name        ANU CS Dark
+@updateURL   https://raw.githubusercontent.com/pl4nty/dotfiles/master/cs.anu.edu.au.css
+@author      Tom Plant
+==/UserStyle== */
+
+@-moz-document regexp("^(http|https):\/\/cs\.anu\.edu\.au(?!\/streams\/){1}.*") {
+    #body-wrap,
+    #body,
+    p.block-title,
+    .msg-info,
+    .msg-success,
+    .msg-warn,
+    .box-college,
+    th,
+    .search-box,
+    .search-box p,
+    .menu-main li,
+    div.menu-flat a.acton-tabs-link-processed,
     #update-wrap,
     #update-details,
     .sml-hdr
