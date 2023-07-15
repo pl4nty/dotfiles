@@ -1,0 +1,63 @@
+{
+  "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "actions": {
+          "Send_an_HTTP_request_to_SharePoint": {
+              "inputs": {
+                  "body": {
+                      "body": "@{triggerBody()}",
+                      "headers": {
+                          "Content-Type": "application/json"
+                      },
+                      "method": "PUT",
+                      "uri": "/v1/me/workLocation"
+                  },
+                  "host": {
+                      "connection": {
+                          "name": "@parameters('$connections')['sharepointonline']['connectionId']"
+                      }
+                  },
+                  "method": "post",
+                  "path": "/datasets/@{encodeURIComponent(encodeURIComponent('https://apac.presence.teams.microsoft.com'))}/httprequest"
+              },
+              "runAfter": {},
+              "type": "ApiConnection"
+          }
+      },
+      "contentVersion": "1.0.0.0",
+      "outputs": {},
+      "parameters": {
+          "$connections": {
+              "defaultValue": {},
+              "type": "Object"
+          }
+      },
+      "triggers": {
+          "manual": {
+              "inputs": {
+                  "schema": {
+                      "properties": {
+                          "location": {
+                              "type": "integer"
+                          }
+                      },
+                      "type": "object"
+                  }
+              },
+              "kind": "Http",
+              "type": "Request"
+          }
+      }
+  },
+  "parameters": {
+      "$connections": {
+          "value": {
+              "sharepointonline": {
+                  "connectionId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-sharedservices/providers/Microsoft.Web/connections/sharepointonline",
+                  "connectionName": "sharepointonline",
+                  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Web/locations/australiaeast/managedApis/sharepointonline"
+              }
+          }
+      }
+  }
+}
