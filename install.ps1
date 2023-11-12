@@ -4,6 +4,6 @@ Write-Warning "Install personal packages, or press S to skip" -WarningAction Inq
 winget import winget-personal.json
 
 oh-my-posh font install --user FiraCode
-mklink $PROFILE Microsoft.PowerShell_profile.ps1
+New-Item -ItemType SymbolicLink $PROFILE -Target Microsoft.PowerShell_profile.ps1
 
-mklink $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json terminal.json
+New-Item -ItemType SymbolicLink $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Target terminal.json
