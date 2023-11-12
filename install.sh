@@ -6,4 +6,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # merge if zshrc already exists
 touch ~/.zshrc
 sed -i 's\plugins=\plugins+=\g' ~/.zshrc
-sort -u .zshrc ~/.zshrc > ~/.zshrc
+cat .zshrc ~/.zshrc > tmp
+mv tmp ~/.zshrc
+rm tmp
