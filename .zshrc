@@ -1,6 +1,3 @@
-export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
 zstyle ':omz:update' mode auto      # update automatically without asking
 
 # Uncomment the following line to display red dots whilst waiting for completion.
@@ -16,4 +13,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(git docker)
 
+export ZSH=$HOME/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/lightgreen.omp.json)"
