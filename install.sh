@@ -8,4 +8,3 @@ touch ~/.zshrc
 sed -i 's\plugins=\plugins+=\g' ~/.zshrc
 cat .zshrc ~/.zshrc > tmp
 mv tmp ~/.zshrc
-rm tmp
