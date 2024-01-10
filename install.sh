@@ -1,5 +1,5 @@
 if [ -d ~/bin ]; then
-  curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/bin; else
+  curl -s https://ohmyposh.dev/install.sh | bash -s else
   curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 fi
 
