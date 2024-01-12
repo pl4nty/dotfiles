@@ -1,4 +1,5 @@
 mkdir -p ~/bin
+export PATH="$PATH:~/bin"
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/bin
 oh-my-posh font install --user FiraCode
 
