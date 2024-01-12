@@ -13,7 +13,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(git docker)
 
-export PATH="$PATH:~/bin"
+export PATH="$PATH:$HOME/bin"
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/lightgreen.omp.json)"
