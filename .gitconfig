@@ -1,6 +1,11 @@
 [user]
 name = Tom Plant
-email = 21111317+pl4nty@users.noreply.github.com
+email = tom@tplant.com.au
 signingkey = key::sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIDgwRqq8r3gqRz9HCIusrTQb7qAdjzK0A1Hka7qppb/BAAAADnNzaDpHaXRTaWduaW5n tom@IVY
 [gpg]
 format = ssh
+[credential "https://dev.azure.com"]
+usehttppath = true
+
+[includeIf "hasconfig:remote.*.url:**/@dev.azure.com/devicie/**"]
+path = devicie.gitconfig

@@ -1,0 +1,6 @@
+[user]
+email = tom.plant@devicie.com
+[commit]
+gpgsign = false
+[tag]
+gpgsign = false
