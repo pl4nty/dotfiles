@@ -1,7 +1,11 @@
+[CmdletBinding(SupportsShouldProcess)]
+param()
+
 # winget export packages.json
 winget import winget.json
-Write-Warning "Install personal packages, or press S to skip" -WarningAction Inquire
-winget import winget-personal.json
+if($PSCmdlet.ShouldProcess("personal packages", "winget import")){
+  winget import winget-personal.json
+}
 
 oh-my-posh font install --user FiraCode
 New-Item -ItemType SymbolicLink $PROFILE -Target Microsoft.PowerShell_profile.ps1
