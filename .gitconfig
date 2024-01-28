@@ -11,5 +11,8 @@ format = ssh
 [credential "https://dev.azure.com"]
 usehttppath = true
 
+[push]
+autoSetupRemote = true
+
 [includeIf "hasconfig:remote.*.url:**/@dev.azure.com/devicie/**"]
 path = devicie.gitconfig
