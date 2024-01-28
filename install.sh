@@ -12,3 +12,4 @@ cat .zshrc ~/.zshrc > tmp
 mv tmp ~/.zshrc
 
 ln -s $PWD/.gitconfig ~/.gitconfig
+ln -s $PWD/devicie.gitconfig ~/devicie.gitconfig
