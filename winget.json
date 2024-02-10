@@ -1,38 +1,80 @@
 {
-	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2023-04-02T23:36:13.843-00:00",
-	"Sources": [
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2024-02-10T13:47:10.714-00:00",
+	"Sources" : 
+	[
 		{
-			"Packages": [
+			"Packages" : 
+			[
 				{
-					"PackageIdentifier": "M2Team.NanaZip"
-				},
-				{
-					"PackageIdentifier": "Docker.DockerDesktop"
-				},
-				{
-					"PackageIdentifier": "Obsidian.Obsidian"
-				},
-				{
-					"PackageIdentifier": "Microsoft.VisualStudioCode"
-				},
-				{
-					"PackageIdentifier": "Microsoft.PowerToys"
-				},
-				{
-					"PackageIdentifier": "Microsoft.PowerShell"
-				},
-				{
-					"PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
+					"PackageIdentifier" : "9P7KNL5RWT25"
 				}
 			],
-			"SourceDetails": {
-				"Argument": "https://cdn.winget.microsoft.com/cache",
-				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name": "winget",
-				"Type": "Microsoft.PreIndexed.Package"
+			"SourceDetails" : 
+			{
+				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
+				"Identifier" : "StoreEdgeFD",
+				"Name" : "msstore",
+				"Type" : "Microsoft.Rest"
+			}
+		},
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "M2Team.NanaZip"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Teams"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive"
+				},
+				{
+					"PackageIdentifier" : "Watfaq.PowerSession"
+				},
+				{
+					"PackageIdentifier" : "AntibodySoftware.WizTree"
+				},
+				{
+					"PackageIdentifier" : "Obsidian.Obsidian"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys"
+				},
+				{
+					"PackageIdentifier" : "Logitech.LogiTune"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Flameshot.Flameshot"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
 			}
 		}
 	],
-	"WinGetVersion": "1.4.10173"
+	"WinGetVersion" : "1.6.3482"
 }
