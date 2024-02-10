@@ -8,21 +8,22 @@
 [CmdletBinding(SupportsShouldProcess)]
 param()
 
-wsl --install --no-distribution
-
 # winget export packages.json
 winget import winget.json --accept-source-agreements --accept-package-agreements
 if ($PSCmdlet.ShouldContinue("personal packages?", "winget import")) {
   winget import winget-personal.json --accept-source-agreements --accept-package-agreements
 }
 
+New-Item -ItemType HardLink $HOME\.wslconfig -Target .wslconfig
+wsl --install --no-distribution
+
 mkdir D:\repos
-"PowerShell", "WindowsPowerShell" | % {
+"PowerShell", "WindowsPowerShell" | ForEach-Object {
   $packages = Join-Path ([Environment]::GetFolderPath("MyDocuments")) $_
   mkdir D:\packages\$_
   New-Item -ItemType Junction $packages -Target D:\packages\$_
   # can't link files (hard or symlink) across drives yet
-  cp Microsoft.PowerShell_profile.ps1 (Join-Path $packages Microsoft.PowerShell_profile.ps1)
+  Copy-Item Microsoft.PowerShell_profile.ps1 $packages\Microsoft.PowerShell_profile.ps1
 }
 Set-PackageSource PSGallery -Trusted
 pwsh -Command {
@@ -37,7 +38,7 @@ Get-Item *.gitconfig | ForEach-Object {
   New-Item -ItemType HardLink (Join-Path $HOME $_.Name) -Target $_.Name
 }
 
-start custom.deskthemepack
+Start-Process custom.deskthemepack
 
 # Extend monitor
 # Set language
