@@ -1,6 +1,8 @@
 [CmdletBinding(SupportsShouldProcess)]
 param()
 
+start custom.deskthemepack
+
 # winget export packages.json
 winget import winget.json
 if($PSCmdlet.ShouldProcess("personal packages", "winget import")){
