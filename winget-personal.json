@@ -43,6 +43,9 @@
 				},
 				{
 					"PackageIdentifier": "icsharpcode.ILSpy"
+				},
+				{
+					"PackageIdentifier": "Rufus.Rufus"
 				}
 			],
 			"SourceDetails": {

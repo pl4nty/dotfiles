@@ -16,8 +16,6 @@ Only accessed remotely (SSH, VSCode Server, dev containers), so just shell confi
 ## Usage
 
 ```PowerShell
-# update winget to avoid an old bug
-Add-AppPackage -path "https://cdn.winget.microsoft.com/cache/source.msix."
 winget install Git.Git
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 git clone https://github.com/pl4nty/dotfiles; cd dotfiles

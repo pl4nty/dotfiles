@@ -2,16 +2,7 @@
 # Power mode to performance
 # Windows Updates
 # Upgrade SKU if needed
-# Extend monitor
-# Set language
-# Taskbar - Explorer, Terminal, Edge, VSCode
-# Unpin/uninstall start menu
-# Alt-tab don't show app tabs
-# Clipboard history
-# Hide desktop icons
-# Explorer show file extensions and hidden files
-# Sign in to Bitwarden and GitHub
-# VSCode sync settings with GitHub
+# Update store apps
 
 [CmdletBinding(SupportsShouldProcess)]
 param()
@@ -32,3 +23,15 @@ New-Item -ItemType HardLink $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal
 Get-Item *.gitconfig | ForEach-Object {
   New-Item -ItemType HardLink (Join-Path $HOME $_.Name) -Target $_.Name
 }
+
+# Extend monitor
+# Set language
+# Set lcok screen
+# Taskbar - Explorer, Terminal, Edge, VSCode
+# Unpin/uninstall start menu
+# Alt-tab don't show app tabs
+# Clipboard history
+# Hide desktop icons
+# Explorer show file extensions and hidden files
+# Sign in to Bitwarden and GitHub
+# VSCode sync settings with GitHub

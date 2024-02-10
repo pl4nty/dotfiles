@@ -65,6 +65,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier": "Watfaq.PowerSession"
 				}
 			],
 			"SourceDetails" : 
