@@ -2,8 +2,9 @@
 networkingMode=mirrored
 dnsTunneling=true
 autoProxy=true
-useWindowsDnsCache=true
-bestEffortDnsParsing=true
 [experimental]
 autoMemoryReclaim=gradual
 sparseVhd=true
+useWindowsDnsCache=true
+bestEffortDnsParsing=true
+hostAddressLoopback=true
