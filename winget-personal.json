@@ -28,9 +28,6 @@
 					"PackageIdentifier" : "WiresharkFoundation.Wireshark"
 				},
 				{
-					"PackageIdentifier" : "Rufus.Rufus"
-				},
-				{
 					"PackageIdentifier" : "dorssel.usbipd-win"
 				},
 				{
