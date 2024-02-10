@@ -68,6 +68,9 @@
 				},
 				{
 					"PackageIdentifier": "Watfaq.PowerSession"
+				},
+				{
+					"PackageIdentifier": "Microsoft.OpenSSH.Beta"
 				}
 			],
 			"SourceDetails" : 
