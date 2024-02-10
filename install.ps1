@@ -21,7 +21,8 @@ mkdir D:\repos
   $packages = Join-Path ([Environment]::GetFolderPath("MyDocuments")) $_
   mkdir D:\packages\$_
   New-Item -ItemType Junction $packages -Target D:\packages\$_
-  New-Item -ItemType HardLink (Join-Path $packages Microsoft.PowerShell_profile.ps1) -Target Microsoft.PowerShell_profile.ps1
+  # can't link files (hard or symlink) across drives yet
+  cp Microsoft.PowerShell_profile.ps1 (Join-Path $packages Microsoft.PowerShell_profile.ps1)
 }
 Set-PackageSource PSGallery -Trusted
 pwsh -Command {
