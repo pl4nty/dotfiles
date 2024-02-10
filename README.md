@@ -12,17 +12,3 @@ I use the [Windows Package Manager](https://learn.microsoft.com/en-us/windows/pa
 ## Linux
 
 Only accessed remotely (SSH, VSCode Server, dev containers), so just shell config with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) and [Oh My Posh](https://github.com/jandedobbeleer/oh-my-posh). Project-specific config is usually managed via dev containers so I can [install my dotfiles automatically](https://code.visualstudio.com/docs/devcontainers/containers#_personalizing-with-dotfile-repositories).
-
-## Usage
-
-```PowerShell
-winget install Git.Git
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
-git clone https://github.com/pl4nty/dotfiles; cd dotfiles
-Set-ExecutionPolicy Bypass -Scope CurrentUser
-.\install.ps1
-```
-
-```bash
-./install.sh
-```

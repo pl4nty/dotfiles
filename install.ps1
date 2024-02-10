@@ -4,6 +4,7 @@
 # Upgrade SKU if needed
 # Update store apps
 # Create 32GB Dev Drive
+# Install Git for Windows manually rather than winget, to enable "use external OpenSSH" for git signing
 
 [CmdletBinding(SupportsShouldProcess)]
 param()
