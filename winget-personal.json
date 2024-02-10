@@ -1,47 +1,57 @@
 {
-	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-02-10T13:47:10.714-00:00",
-	"Sources" : 
-	[
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2024-02-10T13:47:10.714-00:00",
+	"Sources": [
 		{
-			"Packages" : 
-			[
+			"Packages": [
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.BuildTools"
-				},
-				{
-					"PackageIdentifier" : "Telerik.Fiddler.Classic"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WinDbg"
-				},
-				{
-					"PackageIdentifier" : "Insecure.Npcap"
-				},
-				{
-					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
-				},
-				{
-					"PackageIdentifier" : "AntibodySoftware.WizTree"
-				},
-				{
-					"PackageIdentifier" : "WiresharkFoundation.Wireshark"
-				},
-				{
-					"PackageIdentifier" : "dorssel.usbipd-win"
-				},
-				{
-					"PackageIdentifier" : "icsharpcode.ILSpy"
+					"PackageIdentifier": "9P6PMZTM93LR"
 				}
 			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://cdn.winget.microsoft.com/cache",
-				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name" : "winget",
-				"Type" : "Microsoft.PreIndexed.Package"
+			"SourceDetails": {
+				"Argument": "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
+				"Identifier": "StoreEdgeFD",
+				"Name": "msstore",
+				"Type": "Microsoft.Rest"
+			}
+		},
+		{
+			"Packages": [
+				{
+					"PackageIdentifier": "Microsoft.VisualStudio.2022.BuildTools"
+				},
+				{
+					"PackageIdentifier": "Telerik.Fiddler.Classic"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WinDbg"
+				},
+				{
+					"PackageIdentifier": "Insecure.Npcap"
+				},
+				{
+					"PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
+				},
+				{
+					"PackageIdentifier": "AntibodySoftware.WizTree"
+				},
+				{
+					"PackageIdentifier": "WiresharkFoundation.Wireshark"
+				},
+				{
+					"PackageIdentifier": "dorssel.usbipd-win"
+				},
+				{
+					"PackageIdentifier": "icsharpcode.ILSpy"
+				}
+			],
+			"SourceDetails": {
+				"Argument": "https://cdn.winget.microsoft.com/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
 			}
 		}
 	],
-	"WinGetVersion" : "1.6.3482"
+	"WinGetVersion": "1.6.3482"
 }

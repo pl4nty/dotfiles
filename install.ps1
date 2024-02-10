@@ -1,4 +1,5 @@
 
+# Power mode to performance
 # Windows Updates
 # Upgrade SKU if needed
 # Extend monitor
