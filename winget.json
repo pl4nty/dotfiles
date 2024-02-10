@@ -62,6 +62,9 @@
 				},
 				{
 					"PackageIdentifier" : "Flameshot.Flameshot"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell"
 				}
 			],
 			"SourceDetails" : 
