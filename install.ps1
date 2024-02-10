@@ -1,3 +1,17 @@
+
+# Windows Updates
+# Upgrade SKU if needed
+# Extend monitor
+# Set language
+# Taskbar - Explorer, Terminal, Edge, VSCode
+# Unpin/uninstall start menu
+# Alt-tab don't show app tabs
+# Clipboard history
+# Hide desktop icons
+# Explorer show file extensions and hidden files
+# Sign in to Bitwarden and GitHub
+# VSCode sync settings with GitHub
+
 [CmdletBinding(SupportsShouldProcess)]
 param()
 
