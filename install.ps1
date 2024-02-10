@@ -17,7 +17,7 @@ if ($PSCmdlet.ShouldContinue("personal packages?", "winget import")) {
 New-Item -ItemType HardLink $HOME\.wslconfig -Target .wslconfig
 wsl --install --no-distribution
 
-New-Item -ItemType Junction $HOME\.ssh -Target .ssh
+New-Item -ItemType Junction $HOME\.ssh -Target $PSScriptRoot\.ssh
 ssh-add
 
 mkdir D:\repos
