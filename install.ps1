@@ -44,7 +44,9 @@ Get-Item *.gitconfig | ForEach-Object {
 
 Start-Process custom.deskthemepack
 
-# Extend monitor
+# Extend monitor, set primary and refresh rate
+# Don't sleep on lid closed
+# Disable mouse accel
 # Set language
 # Set lock screen
 # Taskbar - Explorer, Terminal, Edge, VSCode
