@@ -36,7 +36,8 @@ pwsh -Command {
 
 oh-my-posh font install --user FiraCode
 
-New-Item -ItemType HardLink $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Target terminal.json
+# can't be hard linked
+Copy-Item terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Force
 
 Get-Item *.gitconfig | ForEach-Object {
   New-Item -ItemType HardLink (Join-Path $HOME $_.Name) -Target $_.Name
