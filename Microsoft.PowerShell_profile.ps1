@@ -21,3 +21,36 @@ $null = Register-EngineEvent -SourceIdentifier 'PowerShell.OnIdle' -MaxTriggerCo
     }
   }
 }
+
+function Add-AutopilotToVM {
+  [CmdletBinding()]
+  param(
+    [parameter(ValueFromPipeline,Mandatory)][Microsoft.HyperV.PowerShell.VirtualMachine]$VM,
+    [parameter(Mandatory)][string]$Tenant
+  )
+
+  begin {
+    $oidc = Invoke-RestMethod https://login.microsoftonline.com/$Tenant/.well-known/openid-configuration
+    $file = New-TemporaryFile
+    @{
+      # Version=2049
+      CloudAssignedTenantId=$oidc.authorization_endpoint -replace "https://login.microsoftonline.com/([^/]+).+", '$1'
+      CloudAssignedTenantDomain=$Tenant
+      CloudAssignedOobeConfig=28
+      CloudAssignedDomainJoinMethod=0
+      CloudAssignedForcedEnrollment=1
+      ZtdCorrelationId=(New-Guid).Guid
+      CloudAssignedAadServerData="{`"ZeroTouchConfig`":{`"CloudAssignedTenantUpn`":`"`",`"CloudAssignedTenantDomain`":`"$Tenant`"}}"
+      # CloudAssignedDeviceName
+      Comment_File="Manual Profile"
+    } | ConvertTo-Json | Set-Content $file
+  }
+  process {
+    # TODO is Stop-VM | Start-VM needed?
+    $_ | Enable-VMTPM | Enable-VMIntegrationService -Name "Guest Service Interface" | Copy-VMFile -FileSource Host -Force -SourcePath $file -DestinationPath "C:\Windows\Provisioning\Autopilot\AutopilotConfigurationFile.json"
+  }
+  end {
+    Remove-Item $file
+  }
+}
+
