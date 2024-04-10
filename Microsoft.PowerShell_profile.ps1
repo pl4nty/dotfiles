@@ -28,7 +28,6 @@ function Add-AutopilotToVM {
     [parameter(ValueFromPipeline,Mandatory)][Microsoft.HyperV.PowerShell.VirtualMachine]$VM,
     [parameter(Mandatory)][string]$Tenant
   )
-
   begin {
     $oidc = Invoke-RestMethod https://login.microsoftonline.com/$Tenant/.well-known/openid-configuration
     $file = New-TemporaryFile
@@ -46,8 +45,8 @@ function Add-AutopilotToVM {
     } | ConvertTo-Json | Set-Content $file
   }
   process {
-    # TODO is Stop-VM | Start-VM needed?
-    $_ | Enable-VMTPM | Enable-VMIntegrationService -Name "Guest Service Interface" | Copy-VMFile -FileSource Host -Force -SourcePath $file -DestinationPath "C:\Windows\Provisioning\Autopilot\AutopilotConfigurationFile.json"
+    $_ | Enable-VMIntegrationService -Name "Guest Service Interface" # Copy-VMFile dependency
+    $_ | Enable-VMTPM -PassThru | Copy-VMFile -FileSource Host -Force -SourcePath $file -DestinationPath "C:\Windows\Provisioning\Autopilot\AutopilotConfigurationFile.json"
   }
   end {
     Remove-Item $file
