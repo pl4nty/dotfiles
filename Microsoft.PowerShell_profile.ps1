@@ -53,3 +53,12 @@ function Add-AutopilotToVM {
   }
 }
 
+function Tail ($Log = "Application", $Pastmins = 5) {
+  $lastdate = $(Get-Date).AddMinutes(-$Pastmins)
+  while ($True) {
+    $newdate = Get-Date
+    Get-WinEvent $Log -ea 0 | where TimeCreated -ge $lastdate -and TimeCreated -le $newdate | Sort-Object TimeCreated
+    $lastdate = $newdate
+    Start-Sleep -Milliseconds 330
+  }
+}
