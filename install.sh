@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir -p ~/bin
 export PATH="$PATH:$HOME/bin"
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/bin
