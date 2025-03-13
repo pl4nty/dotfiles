@@ -15,3 +15,9 @@ mv tmp ~/.zshrc
 
 ln -s $PWD/.gitconfig ~/.gitconfig
 ln -s $PWD/devicie.gitconfig ~/devicie.gitconfig
+
+curl -L https://github.com/cli/cli/releases/latest/download/gh_2.68.1_linux_amd64.tar.gz | \
+  tar xzf - -C /tmp && \
+  mv /tmp/gh_2.68.1_linux_amd64/bin/gh ~/bin/
+rm -r /tmp/gh_2.68.1_linux_amd64
+chmod +x ~/bin/gh
