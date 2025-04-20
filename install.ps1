@@ -34,7 +34,7 @@ pwsh -Command {
   Set-PackageSource PSGallery -Trusted
 }
 
-oh-my-posh font install --user FiraCode
+oh-my-posh font install FiraCode
 
 # can't be hard linked
 Copy-Item terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Force
