@@ -8,8 +8,39 @@ gpgsign = true
 gpgsign = true
 [gpg]
 format = ssh
+
+[sendemail]
+smtpServer = smtp.mailgun.org
+smtpEncryption = tls
+smtpServerPort = 587
+smtpUser = tom@tplant.com.au
+# Supposed to respect server's advertised mechanisms, but doesn't
+# smtpAuth = XOAUTH2 LOGIN
+
+[credential "smtp://smtp-mail.outlook.com:587"]
+oauthClientId = a95fbac5-cbbb-4032-b10d-fb756c457ba1
+oauthAuthorizeEndpoint = https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+oauthTokenEndpoint = https://login.microsoftonline.com/common/oauth2/v2.0/token
+oauthDeviceEndpoint = https://login.microsoftonline.com/common/oauth2/v2.0/devicecode
+oauthRedirectUri = http://localhost
+oauthScopes = offline_access https://outlook.office.com/SMTP.Send
+
+[credential "smtp://smtp.gmail.com:587"]
+oauthClientId = 406964657835-aq8lmia8j95dhl1a2bvharmfk3t1hgqj.apps.googleusercontent.com
+oauthClientSecret = kSmqreRr0qwBWJgbf5Y-PjSU
+oauthAuthorizeEndpoint = https://accounts.google.com/o/oauth2/v2/auth
+oauthTokenEndpoint = https://oauth2.googleapis.com/token
+oauthDeviceEndpoint = https://oauth2.googleapis.com/device/code
+oauthRedirectUri = http://localhost
+oauthScopes = https://mail.google.com/
+
 [credential "https://dev.azure.com"]
 usehttppath = true
+
+# [credential]
+# trace = G:\\repos\\git-credential-manager\\git.log
+# traceSecrets = true
+# helper = G:/repos/git-credential-manager/out/shared/Git-Credential-Manager/bin/Debug/net8.0/git-credential-manager.exe
 
 [push]
 autoSetupRemote = true
