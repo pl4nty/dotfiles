@@ -1,10 +1,14 @@
-
 # Power mode to performance
 # Windows Updates
 # Upgrade SKU if needed
 # Update store apps
-# Create 32GB Dev Drive
-# Install Git for Windows manually rather than winget, to enable "use external OpenSSH" for git signing
+# Create 50GB Dev Drive. if non-admin:
+# diskmgmt.msc
+# create 50GB VHDX
+# create volume but don't format
+# command: `Format D: /DevDrv /Q`
+# Install Git for Windows
+# Set-ExecutionPolicy Bypass -Scope CurrentUser
 
 [CmdletBinding(SupportsShouldProcess)]
 param()

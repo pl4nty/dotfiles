@@ -8,6 +8,9 @@ gpgsign = true
 gpgsign = true
 [gpg]
 format = ssh
+[gpg "ssh"]
+# Silent Git for Windows installs, like via Intune, don't show the option to use external SSH. So we force it
+program = C:/Windows/System32/OpenSSH/ssh-keygen.exe
 
 [sendemail]
 smtpServer = smtp.mailgun.org
