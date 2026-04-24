@@ -1,9 +1,9 @@
 [wsl2]
-networkingMode=mirrored
-dnsTunneling=true
-autoProxy=true
-useWindowsDnsCache=true
-bestEffortDnsParsing=true
+swap=16GB
+# vscode remote often dumps 1.5GB each
+maxCrashDumpCount=-1
+firewall=false
 [experimental]
-autoMemoryReclaim=gradual
 sparseVhd=true
+bestEffortDnsParsing=true
+hostAddressLoopback=true
